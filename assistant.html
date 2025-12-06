@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Assistant - PlantPulse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🌿 NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">🌿 PlantPulse</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upload.html">Upload</a></li>
+          <li><a href="info.html">Disease Info</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assistant.html" class="active">Assistant</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🤖 ASSISTANT HERO SECTION -->
+  <section class="hero fade-in" id="assistant">
+    <div class="hero-text">
+      <span class="badge">🌿 Smart Farming Guide</span>
+      <h1>Chat with Your <span class="highlight">Plant Assistant</span> 🤖</h1>
+      <p class="tagline">
+        Get personalized plant care, seasonal crop suggestions, and soil tips — all powered by AI.
+      </p>
+    </div>
+  </section>
+
+  <!-- 💬 CHATBOT SECTION -->
+  <section class="chatbot-section fade-in visible">
+    <div class="chat-container" id="chatContainer">
+      <!-- JS dynamically adds messages here -->
+    </div>
+  </section>
+
+  <!-- 🌱 FOOTER -->
+  <footer>© 2025 PlantPulse | Your Smart Plant Assistant 🌱</footer>
+
+  <!-- ✅ Scripts -->
+  <script src="assistant.js"></script>
+
+  <!-- Ensure fade-in is visible -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".fade-in").forEach(el => el.classList.add("visible"));
+    });
+  </script>
+
+</body>
+</html>
+
+

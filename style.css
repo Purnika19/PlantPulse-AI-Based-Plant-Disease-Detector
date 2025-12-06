@@ -1,0 +1,764 @@
+/* =============== GLOBAL STYLES =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f9fff9 0%, #eef8ef 100%);
+  color: #1b3b2a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+p {
+  color: #2d4e3b;
+}
+
+/* =============== NAVBAR =============== */
+.navbar {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1b6b3b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav a.active, nav a:hover {
+  color: #1b6b3b;
+}
+
+nav a.active::after, nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #1b6b3b;
+  border-radius: 2px;
+}
+
+/* =============== HERO SECTION =============== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f0faf3 0%, #d9f2db 100%);
+}
+
+.hero-text {
+  max-width: 700px;
+  animation: fadeInUp 1s ease;
+}
+
+.badge {
+  background: #e0f7ea;
+  color: #17803c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #123d24;
+}
+
+.highlight {
+  color: #17803c;
+}
+
+.tagline {
+  font-style: italic;
+  color: #446b4a;
+  margin: 20px 0;
+}
+
+.buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: #17803c;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #17803c;
+  color: #17803c;
+}
+
+.primary:hover {
+  background: #145c2e;
+  transform: translateY(-2px);
+}
+
+.secondary:hover {
+  background: #e3f8e6;
+  transform: translateY(-2px);
+}
+
+/* =============== FEATURES SECTION =============== */
+.features {
+  background: #f8fff8;
+  padding: 80px 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.feature-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #2E8B57;
+}
+
+/* =============== UPLOAD PAGE =============== */
+.upload-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+/* 🌿 Center uploaded image */
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.image-preview img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Result Card */
+.result-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 80%;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+
+
+.result-card h3 {
+  color: #1b6b3b;
+  margin-bottom: 10px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #e0f7ea;
+  border-radius: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #2E8B57, #3CB371);
+  border-radius: 8px;
+  transition: width 1s ease;
+}
+
+/* Upload Box Hover Effect */
+.upload-box {
+  border: 2px dashed #a3d9a5;
+  border-radius: 12px;
+  padding: 40px;
+  background: #ffffff;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.upload-box:hover {
+  border-color: #1b6b3b;
+  background: #f9fff9;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.upload-section h2 {
+  font-size: 2rem;
+  color: #114c2d;
+  margin-bottom: 10px;
+}
+
+.upload-section p {
+  margin-bottom: 30px;
+  color: #476b55;
+}
+
+
+
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: none;
+}
+
+/* =============== DISEASE INFO PAGE =============== */
+.info-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.info-section h2 {
+  font-size: 2.2rem;
+  color: #114c2d;
+  margin-bottom: 10px;
+}
+
+.info-section p {
+  margin-bottom: 40px;
+  color: #476b55;
+}
+
+.disease-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.disease-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.disease-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.disease-card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.disease-card h3 {
+  color: #145c2e;
+  margin-bottom: 10px;
+}
+
+.disease-card h4 {
+  margin-top: 15px;
+  color: #114c2d;
+}
+
+.disease-card ul {
+  margin-left: 20px;
+  color: #2d4e3b;
+  line-height: 1.8;
+}
+
+/* =============== ABOUT PAGE =============== */
+.about-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f7fff8 0%, #e6f9ec 100%);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* 🌿 Floating Leaf Emojis */
+.about-section::before, .about-section::after {
+  content: "🍃";
+  position: absolute;
+  font-size: 2.2rem;
+  opacity: 0.25;
+  animation: floatLeaves 9s linear infinite;
+}
+
+.about-section::before {
+  top: 12%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.about-section::after {
+  bottom: 18%;
+  right: 12%;
+  animation-delay: 4.5s;
+}
+
+@keyframes floatLeaves {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.25; }
+  50% { transform: translateY(-20px) rotate(15deg); opacity: 0.45; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.25; }
+}
+
+/* 🌱 Heading Styling */
+.about-section h2 {
+  font-size: 2.8rem;
+  color: #104b2b;
+  font-weight: 700;
+  margin-bottom: 12px;
+  animation: popIn 1s ease forwards;
+}
+
+.about-section p {
+  color: #476b55;
+  font-size: 1.15rem;
+  margin-top: 5px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 0.6s forwards;
+}
+
+/* ✨ About Cards Layout */
+.about-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  margin: 25px auto;
+  max-width: 800px;
+  text-align: left;
+  transition: all 0.4s ease;
+  transform: scale(0.98);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* 🌼 Grid of Info Boxes */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-box {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 28px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* 🪴 Animated Icon Accent */
+.about-box::after {
+  content: "🌱";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.8rem;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: all 0.4s ease;
+}
+
+.about-box:hover::after {
+  opacity: 0.8;
+  transform: rotate(25deg);
+}
+
+.about-box .icon {
+  font-size: 2.2rem;
+  color: #1b6b3b;
+  margin-bottom: 12px;
+}
+
+.about-box h4 {
+  color: #145c2e;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* 🌿 Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+  60% { opacity: 1; transform: scale(1.05) translateY(-5px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* 🌿 Chatbot Section */
+/* 🌿 Assistant Hero Section */
+#assistant {
+  background: linear-gradient(to bottom right, #f0fff4, #e8f9ee);
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 2px solid #d1e8d3;
+}
+
+#assistant .hero-text h1 {
+  font-size: 2.5rem;
+  color: #114c2d;
+  margin-bottom: 10px;
+}
+
+#assistant .hero-text .highlight {
+  color: #23964f;
+}
+
+#assistant .badge {
+  display: inline-block;
+  background: #d8f3dc;
+  color: #1b6b3b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#assistant .tagline {
+  font-size: 1.1rem;
+  color: #476b55;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.chatbot-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  padding: 60px 20px;
+  background: #f6fff6;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+.bot-message, .user-message {
+  margin: 12px 0;
+  padding: 12px 18px;
+  border-radius: 15px;
+  line-height: 1.5;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.bot-message {
+  background: #e8f9e8;
+  color: #1b6b3b;
+}
+
+.user-message {
+  background: #c9f0c9;
+  margin-left: auto;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-btn {
+  background: #1b6b3b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-btn:hover {
+  background: #23964f;
+  transform: scale(1.03);
+}
+
+
+.fertilizer-card {
+  background: #e8f9e8;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.6s ease;
+}
+.fertilizer-card p {
+  margin: 6px 0;
+  color: #145c2e;
+}
+
+/* =============== FOOTER =============== */
+footer {
+  background: #c9efd4;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+  color: #145c2e;
+  margin-top: 60px;
+}
+
+/* =============== ANIMATIONS =============== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animation */
+/* 🌿 Fade-in Animation (clean and safe) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =============== HEADING POP ANIMATION =============== */
+.pop-heading {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+/* 🌿 FLOATING LEAVES ON ALL PAGE HEADINGS */
+/* This will automatically apply to all major sections (hero, upload, about, assistant, info) */
+
+.hero::before,
+.hero::after,
+.upload-section::before,
+.upload-section::after,
+.about-section::before,
+.about-section::after,
+.info-section::before,
+.info-section::after,
+#assistant::before,
+#assistant::after {
+  content: "🍃";
+  position: absolute;
+  font-size: 2.2rem;
+  opacity: 0.25;
+  animation: floatLeaves 9s linear infinite;
+  pointer-events: none;
+}
+
+/* Positioning for before/after leaves */
+.hero::before,
+.upload-section::before,
+.about-section::before,
+.info-section::before,
+#assistant::before {
+  top: 12%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.hero::after,
+.upload-section::after,
+.about-section::after,
+.info-section::after,
+#assistant::after {
+  bottom: 18%;
+  right: 12%;
+  animation-delay: 4.5s;
+}
+
+/* Floating leaf animation */
+@keyframes floatLeaves {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-20px) rotate(15deg);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.25;
+  }
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .upload-box {
+    width: 95%;
+  }
+}

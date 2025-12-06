@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload - PlantPulse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">🌿 PlantPulse</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upload.html" class="active">Upload</a></li>
+          <li><a href="info.html">Disease Info</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assistant.html" >Assistant</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Upload Section -->
+  <section class="upload-section fade-in">
+    <h2 class="page-heading"> Scan Your Leaf with AI</h2>
+    <p>Upload a photo of a leaf to detect plant diseases instantly using our trained AI model.</p>
+
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <div class="upload-inner">
+        <p>📤 Click to upload or drag and drop</p>
+        <small>Supported formats: JPG, JPEG, PNG</small>
+      </div>
+    </div>
+
+    <div class="image-preview" id="imagePreview">
+      <img id="previewImage" src="#" alt="Uploaded Leaf" />
+    </div>
+
+    <button class="btn primary" id="analyzeButton">🔍 Predict Disease</button>
+
+    <div id="resultCard" class="fade-in" style="display:none; margin-top:40px;">
+      <h3>🌿 Prediction Result</h3>
+      <p><strong>Disease:</strong> <span id="predictedClass">—</span></p>
+      <!-- <p><strong>Confidence:</strong> <span id="confidence">0%</span></p>-->
+
+      <div class="progress-bar-bg">
+        <div id="progressBar" class="progress-bar-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 PlantPulse | AI Leaf Health Detection 🌿</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
