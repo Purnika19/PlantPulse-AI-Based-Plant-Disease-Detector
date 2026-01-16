@@ -16,6 +16,7 @@ D. High validation accuracy (~96%)
 
 E. Clean and user-friendly interface
 
+
 **2.  Model & Training**__
 
 A. Custom CNN with 5 convolutional blocks
@@ -28,6 +29,7 @@ D. Optimizer: Adam (LR = 0.0001)
 
 E. Epochs: 10
 
+
 3. 📁 Project Structure
 project_folder/
 │── dataset/
@@ -37,6 +39,7 @@ project_folder/
 │── requirements.txt
 │── README.md
 
+
 **4. 📊 Results**__
 
 A. Training Accuracy: ~97%
@@ -45,25 +48,28 @@ B. Validation Accuracy: ~96.2%
 
 C. Evaluated using confusion matrix and classification report
 
-**5. 🛠️ Tech Stack**__
+
+**5. 🛠️ Tech Stack**
 
 A.Frontend: HTML, CSS, JavaScript
 B. Backend: Flask (REST API)
 C.ML: TensorFlow / Keras (CNN)
 D. Dataset: PlantVillage (~70k images)
 
-**6. 🚀 Deployment**__
+**6. 🚀 Deployment**
 
-Frontend: Netlify
-👉 https://plantpulse-ai.netlify.app/
+Frontend: Netlify-> https://plantpulse-ai.netlify.app/
 
 Backend & Model API: Hugging Face Spaces (Docker-based Flask API)
 
-Architecture:
 
+
+**Architecture:
+**
 User → Netlify Frontend → Hugging Face API → CNN Model
 
-🏁 Conclusion
+
+**🏁 Conclusion**
 
 PlantPulse is an end-to-end AI project demonstrating model training, evaluation, and real-world deployment using modern ML and web technologies.
 
