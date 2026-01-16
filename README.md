@@ -1,4 +1,7 @@
 # PlantPulse-AI-Based-Plant-Disease-Detector
+
+**Try PlantPulse on** : https://plantpulse-ai.netlify.app/
+
 Plant Disease Detection Using Convolutional Neural Networks (CNN)
 
 This project implements a deep learning–based image classification system to detect plant leaf diseases. The model is trained using a Convolutional Neural Network (CNN) on a dataset of approximately 70,000 leaf images across 38 disease classes, including both healthy and infected leaves. The final trained model can classify a given leaf image and return the predicted disease name and confidence score.
