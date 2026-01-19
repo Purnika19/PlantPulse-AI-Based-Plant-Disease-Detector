@@ -2,6 +2,8 @@
 
 🔗 Live App: https://plantpulse-ai.netlify.app/
 
+⚠️ This is the official deployment of the project by Purnika Malhotra.
+
 PlantPulse is an AI-powered web application that detects plant leaf diseases using Convolutional Neural Networks (CNNs). The model is trained on ~70,000 images from the PlantVillage dataset and can classify 38 plant disease classes with high accuracy.
 
 **1.  Features**
